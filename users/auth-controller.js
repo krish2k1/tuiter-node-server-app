@@ -42,7 +42,7 @@ const AuthController = (app) => {
   };
 
   const update = (req, res) => {
-    
+    console.log(req.body);
     usersDao.updateUser(req.body._id, req.body);
     res.sendStatus(200);
   };
