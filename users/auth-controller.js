@@ -9,6 +9,7 @@ const AuthController = (app) => {
       res.sendStatus(409);
       return;
     }
+    req.body._id = new Date().getTime().toString();
     const newUser = await usersDao.createUser(req.body);
     currentUserVar = newUser;
     res.json(newUser);
@@ -40,7 +41,11 @@ const AuthController = (app) => {
     res.sendStatus(200);
   };
 
-  const update = (req, res) => {};
+  const update = (req, res) => {
+    
+    usersDao.updateUser(req.body._id, req.body);
+    res.sendStatus(200);
+  };
 
   app.post("/api/users/register", register);
   app.post("/api/users/login", login);
