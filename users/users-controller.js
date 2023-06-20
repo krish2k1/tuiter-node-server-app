@@ -23,7 +23,6 @@ const deleteUser = async (req, res) => {
 };
 
 const createUser = async (req, res) => {
-  console.log(req.body)
   const newUser = await usersDao.createUser(req.body);
   res.json(newUser);
 };
