@@ -22,7 +22,7 @@ app.use(
     credentials: true,
     origin: (origin, callback) => {
       // Allow all origins
-      origin: "http://https://a5--stunning-zabaione-a706c6.netlify.app/",
+      origin: "http://https://a6--stunning-zabaione-a706c6.netlify.app/",
         callback(null, true);
     },
     methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Allow all CRUD operations
